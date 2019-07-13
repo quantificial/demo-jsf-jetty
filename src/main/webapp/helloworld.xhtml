@@ -19,13 +19,12 @@
         <h:outputText value="Last Name: " />
         <p:inputText value="#{helloWorld.lastName}" />
 
-        <p:commandButton value="Submit" update="greeting"
-          oncomplete="PF('greetingDialog').show()" />
+        <p:commandButton value="Submit" update="greeting" oncomplete="PF('greetingDialog').show()" />
+        
       </h:panelGrid>
     </p:panel>
 
-    <p:dialog header="Greeting" widgetVar="greetingDialog"
-      modal="true" resizable="false">
+    <p:dialog header="Greeting" widgetVar="greetingDialog" modal="true" resizable="false">
       <h:panelGrid id="greeting" columns="1" cellpadding="4">
         <h:outputText value="#{helloWorld.showGreeting()}" />
       </h:panelGrid>
