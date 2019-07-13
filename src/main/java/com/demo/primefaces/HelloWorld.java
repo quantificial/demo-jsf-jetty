@@ -1,4 +1,4 @@
-package com.codenotfound.primefaces;
+package com.demo.primefaces;
 
 import javax.faces.bean.ManagedBean;
 
@@ -26,5 +26,9 @@ public class HelloWorld {
 
   public String showGreeting() {
     return "Hello " + firstName + " " + lastName + "!";
+  }
+  
+  public String getGreeting() {
+	  return this.showGreeting();
   }
 }
