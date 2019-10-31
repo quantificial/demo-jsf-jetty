@@ -20,6 +20,14 @@
     <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     <jetty-maven-plugin.version>9.4.8.v20171121</jetty-maven-plugin.version>
   </properties>
+  
+  <repositories>
+    <repository>
+      <id>repo1</id>
+      <name>repo1</name>
+      <url>https://repository.primefaces.org/</url>
+    </repository>
+  </repositories>  
 
   <dependencies>
     <!-- Servlet -->
@@ -48,6 +56,15 @@
       <artifactId>primefaces</artifactId>
       <version>${primefaces.version}</version>
     </dependency>
+<!-- https://mvnrepository.com/artifact/org.primefaces.themes/all-themes -->
+<dependency>
+    <groupId>org.primefaces.themes</groupId>
+    <artifactId>all-themes</artifactId>
+    <version>1.0.10</version>
+</dependency>
+
+	
+	    
   </dependencies>
 
   <build>
@@ -77,6 +94,8 @@
         </configuration>
       </plugin>
       <!-- jetty-runner -->
+      <!-- which is used to start the war by command line -->
+      <!-- such as, java -jar jetty-runner.jar application.war -->
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
